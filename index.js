@@ -17,7 +17,7 @@ function calculateResult() {
   var total = ((birthday + duration + elapsed + (serious * stability)) - another)
 
   //Display the result
-  if (total>-1 && <=18){
+  if (total>-1 && total<=18){
     document.getElementById("totalResult").style.display = "block"
     document.getElementById("result").innerHTML = "You're good to go!";
   } else if (total>=18){
