@@ -24,8 +24,8 @@ function calculateResult() {
     document.getElementById("totalResult").style.display = "block"
     document.getElementById("result").innerHTML = "Sorry, they're off limits";  
   } else {
-    document.getElementById("totalResult").style.display = "block"
-    document.getElementById("result").innerHTML = "blah";
+//     document.getElementById("totalResult").style.display = "block"
+//     document.getElementById("result").innerHTML = "blah";
   }
 }
 
