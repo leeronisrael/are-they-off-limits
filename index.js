@@ -8,10 +8,10 @@ function calculateResult() {
   var another = document.getElementById("another").value;
 
   //validate input
-//   if (birthday === 0 || serious == 0 || stability === 0 || duration == 0 || elapsed === 0 || another == 0 ) {
-//     alert("Please enter values");
-//     return;
-//   }
+  if (birthday === -1 || serious === -1 || stability === -1 || duration === -1 || elapsed === -1 || another === -1 ) {
+    alert("Please enter values");
+    return;
+  }
 
   //Calculate sum
   var total = ((birthday + duration + elapsed + (serious * stability)) - another)
