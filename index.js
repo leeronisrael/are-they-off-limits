@@ -8,7 +8,7 @@ function calculateResult() {
   var another = document.getElementById("another").value;
 
   //validate input
-  if (birthday === -1 || serious === -1 || stability === -1 || duration === -1 || elapsed === -1 || another === -1 ) {
+  if (birthday == -1 || serious == -1 || stability == -1 || duration == -1 || elapsed == -1 || another == -1 ) {
     alert("Please enter values");
     return;
   }
