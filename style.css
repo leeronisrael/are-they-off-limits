@@ -9,6 +9,8 @@ body {
 }
 
 #container {
+  margin-left: auto ;
+  margin-right: auto ;
   height: 700px;
   width: 360px;
   margin: 100px auto;
@@ -30,6 +32,10 @@ h1 {
   border-top-right-radius: 20px;
 }
 
+h5 {
+  word-wrap: normal;
+}
+
 p {
   padding-left: 20px;
 }
@@ -44,7 +50,7 @@ input {
 
 #billamt {
   font-size: 12px;
-  /*color: #2980b9;*/
+  color: #2980b9;
   color: #red;
   background-color: #f7f7f7;
   width: 60%;
@@ -99,27 +105,27 @@ button:active {
   top: 1px;
 }
 
-#totalTip {
+#totalResult {
   font-size: 30px;
   margin-top: 5px;
   text-align: center;
 }
 
-#totalTip:before {
+#totalResult:before {
   content: "And the calculator says";
   font-size: 20px;
   font-weight: bold;
   display: block;
-/*  text-transform: uppercase;*/
+  text-transform: uppercase;
 }
 
-#totalTip sup {
+#totalResult sup {
   font-size: 20px;
   top: -18px;
 }
 
-#totalTip small {
-  font-size: 20px;
+#result large {
+  font-size: 48px;
   font-weight: bold;
   display: block;
 }
