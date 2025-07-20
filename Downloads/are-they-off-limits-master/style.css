@@ -1,0 +1,104 @@
+/* Custom Bootstrap overrides and minimal styling */
+
+/* Success and warning colors for results */
+.text-success-custom {
+  color: #28a745 !important;
+}
+
+.text-danger-custom {
+  color: #dc3545 !important;
+}
+
+/* Smooth transitions for interactive elements */
+.btn {
+  transition: all 0.2s ease-in-out;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Card shadow enhancement */
+.card {
+  border: none;
+}
+
+.shadow {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Loading spinner animations */
+.btn-loading {
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+/* Result animations */
+.result-enter {
+  animation: slideInUp 0.6s ease-out forwards, fadeIn 0.6s ease-out forwards;
+}
+
+.result-success-enter {
+  animation: slideInUp 0.6s ease-out forwards, fadeIn 0.6s ease-out forwards, successPulse 0.8s ease-out 0.3s;
+}
+
+.result-danger-enter {
+  animation: slideInUp 0.6s ease-out forwards, fadeIn 0.6s ease-out forwards, dangerShake 0.6s ease-out 0.3s;
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes successPulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+}
+
+@keyframes dangerShake {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+/* Result card animation */
+#totalResult {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.3s ease-out;
+}
+
+#totalResult.show {
+  transform: translateY(0);
+  opacity: 1;
+}
