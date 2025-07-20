@@ -1,99 +1,136 @@
 <!DOCTYPE html>
-<html lang="en" >
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Limits Calculator</title>
   
- <!--        <link rel="stylesheet" href="css/style.css"> -->
-      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
+<body class="bg-light">
 
-  <div id="container">
-  <h1>Are They Off Limits?</h1>
-  <sub>You're interested in a person, but they used to see a friend of yours. Is it a acceptable to pursue a romantic relationship with them? Find out below!</sub>
-  <div id="calculator">
+  <div class="container mt-5">
+    <div class="row justify-content-center">
+      <div class="col-md-8 col-lg-6">
+        <div class="card shadow">
+          <!-- Header -->
+          <div class="card-header bg-primary text-white text-center">
+            <h1 class="h3 mb-0">Are They Off Limits?</h1>
+            <small class="text-light">You're interested in a person, but they used to see a friend of yours. Is it acceptable to pursue a romantic relationship with them? Find out below!</small>
+          </div>
+          
+          <!-- Form Body -->
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="birthday">How do you reach out to your friend on their birthday?</label>
+                <select class="form-control" id="birthday">
+                  <option disabled selected value="-1">-- Choose an Option --</option>
+                  <option value="0">I don't</option>
+                  <option value="1">Facebook Post</option>
+                  <option value="3">Text</option>
+                  <option value="5">Call</option>
+                  <option value="10">Facetime</option>
+                </select>
+              </div>
 
-    <br>
-    <form>
-      <p>How do you reach out to your friend on their birthday?
-            <p>
-              <select id="birthday">
-            <option disabled selected value="-1">-- Choose an Option --</option>
-            <option value="0">I don't</option>
-            <option value="1">Facebook Post</option>
-            <option value="3">Text</option>
-            <option value="5">Call</option>
-            <option value="10">Factime</option>
-        </select>
+              <div class="form-group">
+                <label for="serious">How serious was their relationship?</label>
+                <select class="form-control" id="serious">
+                  <option disabled selected value="-1">-- Choose an Option --</option>
+                  <option value="1">Hooked-Up</option>
+                  <option value="3">Dated</option>
+                  <option value="5">Boyfriend/Girlfriend</option>
+                  <option value="10">Engaged/Married</option>
+                </select>
+              </div>
 
-          <p>How serious was their relationship? 
-            <p>
-              <select id="serious">
-            <option disabled selected value="-1">-- Choose an Option --</option>
-            <option value="1">Hooked-Up</option>
-            <option value="3">Dated</option>
-            <option value="5">Boyfriend/Girlfriend</option>
-            <option value="10">Engaged/Married</option>
-        </select>
+              <div class="form-group">
+                <label for="stability">Was their relationship stable?</label>
+                <select class="form-control" id="stability">
+                  <option disabled selected value="-1">-- Choose an Option --</option>
+                  <option value="1">Yes, very stable</option>
+                  <option value="0.75">Eh, a little unstable</option>
+                  <option value="0.50">Nah, very unstable</option>
+                </select>
+              </div>
 
-          <p>Was their relationship stable?
-            <p>
-              <select id="stability">
-            <option disabled selected value="-1">-- Choose an Option --</option>
-            <option value="1">Yes, very stable</option>
-            <option value="0.75">Eh, a little unstable</option>
-            <option value="0.50">Nah, very unstable</option>
-        </select>
+              <div class="form-group">
+                <label for="duration">What was the duration of their relationship?</label>
+                <select class="form-control" id="duration">
+                  <option disabled selected value="-1">-- Choose an Option --</option>
+                  <option value="1">Less than 3 months</option>
+                  <option value="3">3 - 6 months</option>
+                  <option value="5">6 - 12 months</option>
+                  <option value="7">1 - 3 years</option>
+                  <option value="10">More than 3 years</option>
+                </select>
+              </div>
 
-          <p>What was the duration of their relationship? 
-            <p>
-              <select id="duration">
-            <option disabled selected value="-1">-- Choose an Option --</option>
-            <option value="1">Less than 3 months</option>
-            <option value="3">3 - 6 months</option>
-            <option value="5">6 - 12 months</option>
-            <option value="7">1 - 3 years</option>
-            <option value="10">More than 3 years</option>
-        </select>
+              <div class="form-group">
+                <label for="elapsed">How long has elapsed since the relationship ended?</label>
+                <select class="form-control" id="elapsed">
+                  <option disabled selected value="-1">-- Choose an Option --</option>
+                  <option value="10">Less than 1 year</option>
+                  <option value="5">1 - 2 years</option>
+                  <option value="3">2 - 3 years</option>
+                  <option value="1">More than 3 years</option>
+                </select>
+              </div>
 
-          <p>How long has elapsed since the relationship ended?
-            <p>
-              <select id="elapsed">
-            <option disabled selected value="-1">-- Choose an Option --</option>
-            <option value="10">Less than 1 year</option>
-            <option value="5">1 - 2 years</option>
-            <option value="3">2 - 3 years</option>
-            <option value="1">More than 3 years</option>
-        </select>
-
-          <p>Has your friend been in another relationship since?
-            <p>
-              <select id="another">
-            <option disabled selected value="-1">-- Choose an Option --</option>
-            <option value="0">Yes</option>
-            <option value="3">No</option>
-        </select>        
-    <br></br>
-    <button type="button" id="calculate">Calculate!</button>
-    <button type="button" id="back">Try Again</button>
-
+              <div class="form-group">
+                <label for="another">Has your friend been in another relationship since?</label>
+                <select class="form-control" id="another">
+                  <option disabled selected value="-1">-- Choose an Option --</option>
+                  <option value="0">Yes</option>
+                  <option value="3">No</option>
+                </select>
+              </div>
+            </form>
+            
+            <!-- Buttons -->
+            <div class="row mt-4">
+              <div class="col-6">
+                <button type="button" class="btn btn-primary btn-block" id="calculate">
+                  <span id="calculate-text">Calculate</span>
+                  <span id="loading-spinner" class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                  <span id="loading-text" class="d-none">Calculating...</span>
+                </button>
+              </div>
+              <div class="col-6">
+                <button type="button" class="btn btn-outline-secondary btn-block" id="back">Reset</button>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Result Section -->
+          <div class="card-footer text-center d-none" id="totalResult">
+            <h5 class="text-muted mb-2">The Verdict</h5>
+            <div class="h4" id="result"></div>
+          </div>
+        </div>
+        
+        <!-- Twitter Button -->
+        <div class="text-center mt-3">
+          <a href="https://twitter.com/leeronisrael?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @leeronisrael</a>
+          <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+      </div>
+    </div>
   </div>
-  <!--calculator end-->
-  <div id="totalResult">
-    <span id="result"></span>
-  </div>
-  <!--totalResult end-->
-</div>
-<!--embed twitter button -->
-<a href="https://twitter.com/leeronisrael?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-show-count="false">Follow @leeronisrael</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
-<!--container end-->
-
-    <script  src="index.js"></script>
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-LtrjvnR4Twt/qOuYxE721u19sVFLVSA4hf/rRt6PrZTmiPltdZcI7q7PXQBYTKyf" crossorigin="anonymous"></script>
+  
+  <!-- Custom JS -->
+  <script src="index.js"></script>
 
 </body>
 
